@@ -144,11 +144,7 @@
         <img src="libro.jpg" alt="Manual del SER Humano" style="width: 120px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
     </div>
     
-    <h3 style="margin-bottom: 20px; color: #8A2BE2;">Obtén tu copia digital inmediata</h3>
-    
-    <!-- PRECIO -->
-    <div class="precio-original">Precio regular: $97</div>
-    <div class="precio-oferta">¡Solo hoy: $47!</div>
+    <h3 style="margin-bottom: 20px; color: #8A2BE2;">Adquiere el manual</h3>
     
     <!-- URGENCIA -->
     <div class="urgencia">⏰ OFERTA LIMITADA</div>
@@ -158,8 +154,7 @@
         <a href="https://go.hotmart.com/N100172556W" 
            target="_blank" 
            rel="noopener"
-           class="btn-hotmart pulse"
-           onclick="trackHotmartClick()">
+           class="btn-hotmart pulse">
             🔓 ACTIVAR MI DESPERTAR AHORA
         </a>
     </div>
@@ -188,8 +183,7 @@
     <a href="https://go.hotmart.com/N100172556W" 
        target="_blank" 
        rel="noopener"
-       class="btn-primary pulse"
-       onclick="trackHotmartClick()">
+       class="btn-primary pulse">
         💫 INICIAR MI RENACIMIENTO
     </a>
 </section>
@@ -201,7 +195,7 @@
 </footer>
 
 <script>
-// Smooth scroll
+// Smooth scroll para enlaces internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -215,35 +209,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Tracking para clicks en Hotmart
-function trackHotmartClick() {
-    console.log('Click en enlace de Hotmart registrado');
-    
-    // Aquí puedes agregar código de tracking adicional
-    // Por ejemplo, Google Analytics:
-    // gtag('event', 'click', {
-    //     event_category: 'Hotmart',
-    //     event_label: 'Manual del SER Humano'
-    // });
-    
-    // O Facebook Pixel:
-    // fbq('track', 'InitiateCheckout');
+// Función simple para testing
+function testClick() {
+    console.log('Botón clickeado correctamente');
 }
-
-// Contador de urgencia (opcional)
-function iniciarContador() {
-    const horas = 23;
-    const minutos = 59;
-    const segundos = 59;
-    
-    // Aquí podrías agregar un contador regresivo real
-    console.log('Contador de urgencia iniciado');
-}
-
-// Inicializar cuando carga la página
-document.addEventListener('DOMContentLoaded', function() {
-    iniciarContador();
-});
 </script>
 
 </body>
