@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual del SER Humano</title>
     <style>
-        /* Estilos base que probablemente ya tienes */
+        /* Estilos base */
         .guarantee {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -91,123 +91,8 @@
             box-shadow: 0 12px 35px rgba(138, 43, 226, 0.4);
         }
         
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 50px;
-        }
-        
         .precio-oferta {
             font-size: 2rem;
             color: #ff6b35;
             font-weight: bold;
             margin: 15px 0;
-        }
-        
-        .precio-original {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1.2rem;
-        }
-        
-        .urgencia {
-            background: #ff4757;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            margin: 15px 0;
-            display: inline-block;
-            animation: blink 1.5s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-    </style>
-</head>
-<body>
-
-<!-- GARANTÍA -->
-<section class="guarantee">
-    🛡️ <strong>Garantía de 7 días</strong><br>
-    Tranquilo, si este manual no es lo que esperabas te devuelvo el 100% de tu dinero
-</section>
-
-<!-- SECCIÓN DE COMPRA CON HOTMART -->
-<section class="formulario" id="comprar">
-    <!-- IMAGEN DEL LIBRO PEQUEÑA -->
-    <div style="margin: 20px 0;">
-        <img src="Foto.jpg" alt="Manual del SER Humano" style="width: 120px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-    </div>
-    
-    <h3 style="margin-bottom: 20px; color: #8A2BE2;">Adquiere el manual</h3>
-    
-    <!-- URGENCIA -->
-    <div class="urgencia">⏰ OFERTA LIMITADA</div>
-    
-    <!-- BOTÓN DE HOTMART -->
-    <div style="margin: 30px 0;">
-        <a href="https://go.hotmart.com/N100172556W" target="_blank" class="btn-hotmart pulse">
-            🔓 ACTIVAR MI DESPERTAR AHORA
-        </a>
-    </div>
-    
-    <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">
-        ⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados
-    </p>
-    
-    <!-- BENEFICIOS ADICIONALES -->
-    <div style="margin-top: 20px; font-size: 0.9rem; color: #555;">
-        ✅ Descarga inmediata<br>
-        ✅ Acceso de por vida<br>
-        ✅ Soporte 24/7<br>
-        ✅ Actualizaciones gratuitas
-    </div>
-</section>
-
-<!-- SEGUNDO TESTIMONIAL -->
-<section class="testimonial">
-    "Mi autoconcepto cambió completamente. Dejé de identificarme con mis pensamientos limitantes y encontré mi verdadera esencia."
-    <div class="testimonial-author">- Carlos R., Psicólogo</div>
-</section>
-
-<!-- CTA FINAL -->
-<section style="margin: 40px 0; text-align: center;">
-    <a href="https://go.hotmart.com/N100172556W" target="_blank" class="btn-primary pulse">
-        💫 INICIAR MI RENACIMIENTO
-    </a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2025 Manual del SER Humano · @sufrimosporquequeremos<br>
-    <small>Garantía de satisfacción • Pago seguro • Descarga inmediata</small>
-</footer>
-
-<script>
-// Smooth scroll para enlaces internos
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Función simple para testing
-function testClick() {
-    console.log('Botón clickeado correctamente');
-}
-</script>
-
-</body>
-</html>
