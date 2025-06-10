@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Manual del SER Humano</title>
   <style>
+    /* Reset sencillo */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
       font-family: sans-serif;
       background: #111;
       color: #eee;
       text-align: center;
+      line-height: 1.5;
     }
+
     .guarantee {
       padding: 2rem;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #fff;
     }
+
     .form-section {
       padding: 2rem;
     }
+
     .urgencia {
       display: inline-block;
       margin: 1rem 0;
@@ -29,31 +35,33 @@
       border-radius: 25px;
       animation: blink 1.5s infinite;
     }
-    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.7} }
+    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.7; } }
+
     .btn-buy {
-      background: linear-gradient(135deg,#ff6b35 0%,#f7931e 100%);
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
       color: #fff;
       padding: 1rem 2rem;
       border: none;
       border-radius: 50px;
       font-size: 1.2rem;
       font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 8px 25px rgba(255,107,53,0.3);
       text-transform: uppercase;
       letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255,107,53,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 1rem;
     }
     .btn-buy:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 35px rgba(255,107,53,0.4);
     }
+
     .pulse {
       animation: pulse 2s infinite;
     }
-    @keyframes pulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.05)} }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
     .testimonial {
       background: #f8f9fa;
       color: #333;
@@ -69,6 +77,7 @@
       color: #8A2BE2;
       font-weight: bold;
     }
+
     footer {
       margin-top: 3rem;
       padding: 2rem;
@@ -78,60 +87,5 @@
     }
   </style>
 </head>
-<body>
+<bod
 
-  <!-- GARANTÍA -->
-  <section class="guarantee">
-    🛡️ <strong>Garantía de 7 días</strong><br>
-    Si no te convence, te devuelvo el 100% de tu dinero
-  </section>
-
-  <!-- SECCIÓN DE COMPRA -->
-  <section class="form-section">
-    <h1>Manual del SER Humano</h1>
-    <div class="urgencia">⏰ OFERTA LIMITADA</div>
-    <div style="margin: 2rem 0;">
-      <button id="buyBtn" class="btn-buy pulse">
-        🔓 ACTIVAR MI DESPERTAR AHORA
-      </button>
-    </div>
-    <p style="font-size: 0.9rem; color: #ccc;">
-      ⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados
-    </p>
-    <p style="font-size: 0.9rem; color: #aaa; margin-top: 1rem;">
-      ✅ Descarga inmediata · ✅ Acceso de por vida · ✅ Soporte 24/7 · ✅ Actualizaciones gratuitas
-    </p>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="testimonial">
-    "Mi autoconcepto cambió completamente. Dejé de identificarme con mis pensamientos limitantes y encontré mi verdadera esencia."
-    <div class="testimonial-author">– Carlos R., Psicólogo</div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="form-section">
-    <button id="buyBtn2" class="btn-buy pulse">
-      💫 INICIAR MI RENACIMIENTO
-    </button>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Manual del SER Humano · @sufrimosporquequeremos<br>
-    Garantía • Pago seguro • Descarga inmediata
-  </footer>
-
-  <script>
-    // URL de Hotmart
-    const HOTMART_URL = 'https://go.hotmart.com/N100172556W';
-
-    // Asignar evento a ambos botones
-    document.querySelectorAll('#buyBtn, #buyBtn2').forEach(btn => {
-      btn.addEventListener('click', () => {
-        window.open(HOTMART_URL, '_blank');
-      });
-    });
-  </script>
-</body>
-</html>
