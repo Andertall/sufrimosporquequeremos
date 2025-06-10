@@ -3,35 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprar Manual del SER Humano</title>
-
-  <!-- 1) Importa el script y el CSS de Hotmart -->
-  <script src="https://static.hotmart.com/checkout/widget.min.js" async></script>
-  <link
-    rel="stylesheet"
-    href="https://static.hotmart.com/css/hotmart-fb.min.css"
-  />
+  <title>Manual del SER Humano</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #eee;
+      text-align: center;
+    }
+    .guarantee {
+      padding: 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+    .form-section {
+      padding: 2rem;
+    }
+    .urgencia {
+      display: inline-block;
+      margin: 1rem 0;
+      background: #ff4757;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.7} }
+    .btn-buy {
+      background: linear-gradient(135deg,#ff6b35 0%,#f7931e 100%);
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 8px 25px rgba(255,107,53,0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-buy:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(255,107,53,0.4);
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.05)} }
+    .testimonial {
+      background: #f8f9fa;
+      color: #333;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      max-width: 600px;
+      border-left: 4px solid #8A2BE2;
+      font-style: italic;
+    }
+    .testimonial-author {
+      text-align: right;
+      margin-top: 1rem;
+      color: #8A2BE2;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #2c3e50;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-  <section style="text-align:center; padding:2rem;">
-    <h1>Manual del SER Humano</h1>
-    <p>🛡️ Garantía 7 días: reembolso 100% si no te convence.</p>
-
-    <!-- 2) Tu enlace debe llevar ESTA clase y estos atributos -->
-    <a
-      href="https://pay.hotmart.com/N100172556W?checkoutMode=2"
-      class="hotmart__button-checkout"
-      data-code="N100172556W"
-      data-checkout-mode="2"
-      style="display:inline-block; margin-top:1rem;"
-    >
-      <img
-        src="https://static.hotmart.com/img/btn-buy-green.png"
-        alt="Comprar Ahora"
-      />
-    </a>
+  <!-- GARANTÍA -->
+  <section class="guarantee">
+    🛡️ <strong>Garantía de 7 días</strong><br>
+    Si no te convence, te devuelvo el 100% de tu dinero
   </section>
 
+  <!-- SECCIÓN DE COMPRA -->
+  <section class="form-section">
+    <h1>Manual del SER Humano</h1>
+    <div class="urgencia">⏰ OFERTA LIMITADA</div>
+    <div style="margin: 2rem 0;">
+      <button id="buyBtn" class="btn-buy pulse">
+        🔓 ACTIVAR MI DESPERTAR AHORA
+      </button>
+    </div>
+    <p style="font-size: 0.9rem; color: #ccc;">
+      ⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados
+    </p>
+    <p style="font-size: 0.9rem; color: #aaa; margin-top: 1rem;">
+      ✅ Descarga inmediata · ✅ Acceso de por vida · ✅ Soporte 24/7 · ✅ Actualizaciones gratuitas
+    </p>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    "Mi autoconcepto cambió completamente. Dejé de identificarme con mis pensamientos limitantes y encontré mi verdadera esencia."
+    <div class="testimonial-author">– Carlos R., Psicólogo</div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="form-section">
+    <button id="buyBtn2" class="btn-buy pulse">
+      💫 INICIAR MI RENACIMIENTO
+    </button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Manual del SER Humano · @sufrimosporquequeremos<br>
+    Garantía • Pago seguro • Descarga inmediata
+  </footer>
+
+  <script>
+    // URL de Hotmart
+    const HOTMART_URL = 'https://go.hotmart.com/N100172556W';
+
+    // Asignar evento a ambos botones
+    document.querySelectorAll('#buyBtn, #buyBtn2').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.open(HOTMART_URL, '_blank');
+      });
+    });
+  </script>
 </body>
 </html>
