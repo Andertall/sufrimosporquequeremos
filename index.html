@@ -4,181 +4,66 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manual del SER Humano</title>
+
+  <!-- Importar Hotmart Widget -->
+  <script type="text/javascript">
+    function importHotmart(){
+      var script = document.createElement('script');
+      script.src = 'https://static.hotmart.com/checkout/widget.min.js';
+      script.async = true;
+      document.head.appendChild(script);
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+      document.head.appendChild(link);
+    }
+    importHotmart();
+  </script>
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: #222;
-    }
-    .container {
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    .hero {
-      margin-top: 60px;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-    }
-    .hero p {
-      font-size: 1rem;
-      margin-bottom: 24px;
-      opacity: 0.8;
-    }
-    .btn-primary {
-      display: inline-block;
-      padding: 12px 32px;
-      font-size: 1rem;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(90deg, #8A2BE2, #DA70D6);
-      border-radius: 24px;
-      margin-bottom: 40px;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(90deg, #DA70D6, #8A2BE2);
-    }
-    .price {
-      margin: 20px 0;
-    }
-    .price-new {
-      font-size: 1.5rem;
-      color: #FF1493;
-      font-weight: bold;
-    }
-    .oscillate {
-      animation: oscillate 2s ease-in-out infinite;
-    }
-    @keyframes oscillate {
-      0% { transform: translateX(0) scale(1); }
-      50% { transform: translateX(3px) scale(1.05); }
-      100% { transform: translateX(0) scale(1); }
-    }
-    .benefits {
-      margin: 40px 0;
-      text-align: left;
-    }
-    .benefit-item {
-      margin: 15px 0;
-      font-size: 0.9rem;
-      padding-left: 20px;
-      position: relative;
-    }
-    .benefit-item:before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #8A2BE2;
-      font-weight: bold;
-    }
-    .offer {
-      background: linear-gradient(135deg, #8A2BE2, #DA70D6);
-      color: white;
-      padding: 30px 20px;
-      border-radius: 15px;
-      margin: 40px 0;
-      text-align: center;
-    }
-    .offer h3 {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-    }
-    .offer p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-    .offer a {
-      display: inline-block;
-      padding: 12px 32px;
-      font-size: 1rem;
-      color: #fff;
-      background: rgba(255,255,255,0.2);
-      border: 2px solid white;
-      border-radius: 24px;
-      text-decoration: none;
-      margin-top: 15px;
-      transition: background 0.2s;
-    }
-    .offer a:hover {
-      background: rgba(255,255,255,0.4);
-    }
-    .testimonial {
-      font-style: italic;
-      margin: 30px 0;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      border-left: 4px solid #8A2BE2;
-    }
-    .testimonial-author {
-      color: #666;
-      font-size: 0.85rem;
-      margin-top: 10px;
-    }
-    .guarantee {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 20px 0;
-      padding: 15px;
-      background: rgba(39,174,96,0.1);
-      border-radius: 8px;
-      border: 1px solid rgba(39,174,96,0.3);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-    form input {
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    form button {
-      padding: 12px;
-      font-size: 1rem;
-      background: #FF1493;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    form button:hover {
-      background: #FF69B4;
-    }
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-    footer {
-      font-size: 0.8rem;
-      opacity: 0.6;
-      margin-top: 60px;
-    }
+    body { margin:0; padding:0; font-family:Arial,sans-serif; background:#fff; color:#222; }
+    .container { max-width:480px; margin:0 auto; padding:20px; text-align:center; }
+    .hero { margin-top:60px; }
+    .hero h1 { font-size:2rem; margin-bottom:16px; }
+    .hero p { font-size:1rem; margin-bottom:24px; opacity:0.8; }
+    .btn-primary { display:inline-block; padding:12px 32px; font-size:1rem; text-decoration:none; color:#fff;
+      background:linear-gradient(90deg,#8A2BE2,#DA70D6); border-radius:24px; margin-bottom:40px; transition:background 0.2s; }
+    .btn-primary:hover { background:linear-gradient(90deg,#DA70D6,#8A2BE2); }
+    .benefits { margin:40px 0; text-align:left; }
+    .benefit-item { margin:15px 0; font-size:0.9rem; padding-left:20px; position:relative; }
+    .benefit-item:before { content:"✓"; position:absolute; left:0; color:#8A2BE2; font-weight:bold; }
+    .offer { background:linear-gradient(135deg,#8A2BE2,#DA70D6); color:#fff; padding:30px 20px; border-radius:15px;
+      margin:40px 0; text-align:center; }
+    .offer h3 { font-size:1.3rem; margin-bottom:20px; }
+    .offer p { font-size:1rem; margin-bottom:20px; font-weight:bold; }
+    .testimonial { font-style:italic; margin:30px 0; padding:20px; background:#f8f9fa;
+      border-radius:8px; border-left:4px solid #8A2BE2; }
+    .testimonial-author { color:#666; font-size:0.85rem; margin-top:10px; }
+    .guarantee { font-size:0.9rem; color:#666; margin:20px 0;
+      padding:15px; background:rgba(39,174,96,0.1); border-radius:8px; border:1px solid rgba(39,174,96,0.3); }
+    .formulario { display:flex; flex-direction:column; gap:12px; margin-bottom:40px; align-items:center; }
+    .formulario img { width:120px; border-radius:6px; box-shadow:0 8px 20px rgba(0,0,0,0.2); margin:20px 0; }
+    form { display:flex; flex-direction:column; gap:12px; margin-bottom:40px; width:100%; }
+    form input { padding:10px; font-size:1rem; border:1px solid #ccc; border-radius:8px; }
+    form button { padding:12px; font-size:1rem; background:#FF1493; color:#fff; border:none;
+      border-radius:8px; cursor:pointer; transition:background 0.2s; }
+    form button:hover { background:#FF69B4; }
+    .pulse { animation:pulse 2s infinite; }
+    @keyframes pulse { 0% { transform:scale(1); } 50% { transform:scale(1.05); } 100% { transform:scale(1); } }
+    footer { font-size:0.8rem; opacity:0.6; margin-top:60px; }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- HERO -->
     <section class="hero">
-      <div style="margin: 20px 0;">
-        <img src="Foto.jpg" alt="Manual del SER Humano" style="width: 220px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-      </div>
+      <div style="margin:20px 0;"><img src="Foto.jpg" alt="Manual del SER Humano" style="width:220px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.3);"></div>
       <h1>Esto no es un libro cualquiera</h1>
       <p>Este manual es un espejo. Te mostrará lo que necesitas recordar,<br>incluso si te incomoda. ¿Estás listo para crear tu nueva versión?</p>
-      <div class="price">
-        <span class="price-new oscillate">✨ ACCESO INMEDIATO ✨</span>
-      </div>
-      <a href="https://go.hotmart.com/N100172556W" target="_blank" class="btn-primary pulse">🧠 Transformar mi vida ahora</a>
+      <!-- Botón Hotmart -->
+      <a onclick="return false;" href="https://pay.hotmart.com/N100172556W?checkoutMode=2" class="hotmart-fb hotmart__button-checkout btn-primary pulse">
+        🧠 Transformar mi vida ahora
+      </a>
     </section>
 
     <!-- BENEFICIOS -->
@@ -194,15 +79,18 @@
     <section class="offer">
       <h3>🔥 OFERTA IMPERDIBLE 🔥</h3>
       <p>Si compras el Manual del SER Humano recibes 3 bonos adicionales:</p>
-      <div style="text-align: left; margin: 20px 0;">
-        <div style="margin: 15px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; top: 0;">⚡</span><strong>+ Las Leyes Invisibles</strong></div>
-        <div style="margin: 15px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; top: 0;">🧸</span><strong>+ Sanando tu Niño Interior</strong></div>
-        <div style="margin: 15px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; top: 0;">👥</span><strong>+ Acceso a la Comunidad</strong></div>
+      <div style="text-align:left;margin:20px 0;">
+        <div style="margin:15px 0;padding-left:25px;position:relative;"><span style="position:absolute;left:0;top:0;">⚡</span>+ Las Leyes Invisibles</div>
+        <div style="margin:15px 0;padding-left:25px;position:relative;"><span style="position:absolute;left:0;top:0;">🧸</span>+ Sanando tu Niño Interior</div>
+        <div style="margin:15px 0;padding-left:25px;position:relative;"><span style="position:absolute;left:0;top:0;">👥</span>+ Acceso a la Comunidad</div>
       </div>
-      <div style="border-top: 2px solid rgba(255,255,255,0.3); padding-top: 20px; margin-top: 25px;">
-        <p style="font-size: 1.3rem; font-weight: bold; margin: 15px 0;">✨ ACCESO INMEDIATO A TODO ✨</p>
-        <p style="font-size: 1rem; opacity: 0.9; margin: 10px 0;">🎯 Transformación completa garantizada</p>
-        <a href="https://go.hotmart.com/N100172556W" target="_blank" class="btn-primary pulse" style="margin-top: 15px; background: rgba(255,255,255,0.2); border: 2px solid white;">💫 OBTENER TODO AHORA</a>
+      <div style="border-top:2px solid rgba(255,255,255,0.3);padding-top:20px;margin-top:25px;">
+        <p style="font-size:1.3rem;font-weight:bold;margin:15px 0;">✨ ACCESO INMEDIATO A TODO ✨</p>
+        <p style="font-size:1rem;opacity:0.9;margin:10px 0;">🎯 Transformación completa garantizada</p>
+        <!-- Botón Hotmart -->
+        <a onclick="return false;" href="https://pay.hotmart.com/N100172556W?checkoutMode=2" class="hotmart-fb hotmart__button-checkout btn-primary pulse" style="margin-top:15px;">
+          💫 OBTENER TODO AHORA
+        </a>
       </div>
     </section>
 
@@ -219,16 +107,14 @@
 
     <!-- FORMULARIO -->
     <section class="formulario" id="comprar">
-      <div style="margin: 20px 0;">
-        <img src="Foto.jpg" alt="Manual del SER Humano" style="width: 120px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-      </div>
-      <h3 style="margin-bottom: 20px; color: #8A2BE2;">Obtén tu copia digital inmediata</h3>
-      <form onsubmit="window.open('https://go.hotmart.com/N100172556W','_blank'); return false;">
+      <div style="margin:20px 0;"><img src="Foto.jpg" alt="Manual del SER Humano" style="width:120px;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,0.2);"></div>
+      <h3 style="margin-bottom:20px;color:#8A2BE2;">Obtén tu copia digital inmediata</h3>
+      <form onsubmit="window.open('https://pay.hotmart.com/N100172556W?checkoutMode=2','_blank'); return false;">
         <input type="text" placeholder="Nombre completo" required />
         <input type="email" placeholder="Correo electrónico" required />
         <button type="submit" class="pulse">🔓 ACTIVAR MI DESPERTAR</button>
       </form>
-      <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados</p>
+      <p style="font-size:0.8rem;color:#666;margin-top:10px;">⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados</p>
     </section>
 
     <!-- SEGUNDO TESTIMONIAL -->
@@ -238,8 +124,11 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section style="margin: 40px 0; text-align: center;">
-      <a href="https://go.hotmart.com/N100172556W" target="_blank" class="btn-primary pulse">💫 Inicia tu transformación</a>
+    <section style="margin:40px 0;text-align:center;">
+      <!-- Botón Hotmart -->
+      <a onclick="return false;" href="https://pay.hotmart.com/N100172556W?checkoutMode=2" class="hotmart-fb hotmart__button-checkout btn-primary pulse">
+        💫 Inicia tu transformación
+      </a>
     </section>
 
     <!-- FOOTER -->
@@ -251,12 +140,10 @@
   <script>
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function(e){
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({behavior:'smooth',block:'start'});
       });
     });
   </script>
