@@ -56,11 +56,9 @@
       animation: oscillate 2s ease-in-out infinite;
     }
     @keyframes oscillate {
-      0% { transform: translateX(0px) scale(1); }
-      25% { transform: translateX(-3px) scale(1.02); }
+      0% { transform: translateX(0) scale(1); }
       50% { transform: translateX(3px) scale(1.05); }
-      75% { transform: translateX(-2px) scale(1.02); }
-      100% { transform: translateX(0px) scale(1); }
+      100% { transform: translateX(0) scale(1); }
     }
     .benefits {
       margin: 40px 0;
@@ -78,6 +76,38 @@
       left: 0;
       color: #8A2BE2;
       font-weight: bold;
+    }
+    .offer {
+      background: linear-gradient(135deg, #8A2BE2, #DA70D6);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .offer h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    .offer p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .offer a {
+      display: inline-block;
+      padding: 12px 32px;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      border: 2px solid white;
+      border-radius: 24px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: background 0.2s;
+    }
+    .offer a:hover {
+      background: rgba(255,255,255,0.4);
     }
     .testimonial {
       font-style: italic;
@@ -129,11 +159,6 @@
     .pulse {
       animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
     footer {
       font-size: 0.8rem;
       opacity: 0.6;
@@ -145,20 +170,14 @@
   <div class="container">
     <!-- HERO -->
     <section class="hero">
-      <!-- IMAGEN DEL LIBRO -->
       <div style="margin: 20px 0;">
-        <img src="https://i.imgur.com/lNVRGt6.jpg" alt="Manual del SER Humano" style="width: 220px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <img src="Foto.jpg" alt="Manual del SER Humano" style="width: 220px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
       </div>
       <h1>Esto no es un libro cualquiera</h1>
-      <p>
-        Este manual es un espejo. Te mostrará lo que necesitas recordar,<br>
-        incluso si te incomoda. ¿Estás listo para crear tu nueva versión?
-      </p>
-
+      <p>Este manual es un espejo. Te mostrará lo que necesitas recordar,<br>incluso si te incomoda. ¿Estás listo para crear tu nueva versión?</p>
       <div class="price">
         <span class="price-new oscillate">✨ ACCESO INMEDIATO ✨</span>
       </div>
-
       <a href="https://go.hotmart.com/N100172556W" target="_blank" rel="noopener noreferrer" class="btn-primary pulse">🧠 Transformar mi vida ahora</a>
     </section>
 
@@ -172,16 +191,14 @@
     </section>
 
     <!-- OFERTA IMPERDIBLE -->
-    <section style="background: linear-gradient(135deg, #8A2BE2, #DA70D6); color: white; padding: 30px 20px; border-radius: 15px; margin: 40px 0; text-align: center;">
-      <h3 style="color: white; margin-bottom: 20px; font-size: 1.3rem;">🔥 OFERTA IMPERDIBLE 🔥</h3>
-      <p style="font-size: 1rem; margin-bottom: 20px; font-weight: bold;">Si compras el Manual del SER Humano recibes 3 bonos adicionales:</p>
-
+    <section class="offer">
+      <h3>🔥 OFERTA IMPERDIBLE 🔥</h3>
+      <p>Si compras el Manual del SER Humano recibes 3 bonos adicionales:</p>
       <div style="text-align: left; margin: 20px 0;">
         <div style="margin: 15px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; top: 0;">⚡</span><strong>+ Las Leyes Invisibles</strong></div>
         <div style="margin: 15px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; top: 0;">🧸</span><strong>+ Sanando tu Niño Interior</strong></div>
         <div style="margin: 15px 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; top: 0;">👥</span><strong>+ Acceso a la Comunidad</strong></div>
       </div>
-
       <div style="border-top: 2px solid rgba(255,255,255,0.3); padding-top: 20px; margin-top: 25px;">
         <p style="font-size: 1.3rem; font-weight: bold; margin: 15px 0;">✨ ACCESO INMEDIATO A TODO ✨</p>
         <p style="font-size: 1rem; opacity: 0.9; margin: 10px 0;">🎯 Transformación completa garantizada</p>
@@ -197,27 +214,21 @@
 
     <!-- GARANTÍA -->
     <section class="guarantee">
-      🛡️ <strong>Garantía de 7 días</strong><br>
-      Tranquilo, si este manual no es lo que esperabas te devuelvo el 100% de tu dinero
+      🛡️ <strong>Garantía de 7 días</strong><br>Tranquilo, si este manual no es lo que esperabas te devuelvo el 100% de tu dinero
     </section>
 
     <!-- FORMULARIO -->
     <section class="formulario" id="comprar">
-      <!-- IMAGEN DEL LIBRO PEQUEÑA -->
       <div style="margin: 20px 0;">
-        <img src="https://i.imgur.com/lNVRGt6.jpg" alt="Manual del SER Humano" style="width: 120px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+        <img src="Foto.jpg" alt="Manual del SER Humano" style="width: 120px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
       </div>
-
       <h3 style="margin-bottom: 20px; color: #8A2BE2;">Obtén tu copia digital inmediata</h3>
       <form onsubmit="window.open('https://go.hotmart.com/N100172556W','_blank'); return false;">
         <input type="text" placeholder="Nombre completo" required />
         <input type="email" placeholder="Correo electrónico" required />
         <button type="submit" class="pulse">🔓 ACTIVAR MI DESPERTAR</button>
       </form>
-
-      <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">
-        ⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados
-      </p>
+      <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados</p>
     </section>
 
     <!-- SEGUNDO TESTIMONIAL -->
@@ -228,7 +239,7 @@
 
     <!-- CTA FINAL -->
     <section style="margin: 40px 0; text-align: center;">
-      <a href="https://go-hotmart.com/N100172556W" class="btn-primary pulse" onclick="window.open('https://go.hotmart.com/N100172556W','_blank'); return false;">💫 INICIAR MI RENACIMIENTO</a>
+      <a href="https://go.hotmart.com/N100172556W" target="_blank" rel="noopener noreferrer" class="btn-primary pulse" onclick="window.open('https://go-hotmart.com/N100172556W','_blank'); return false;">💫 Inicia tu transformación</a>
     </section>
 
     <!-- FOOTER -->
@@ -236,7 +247,6 @@
       © 2025 Manual del SER Humano · @sufrimosporquequeremos<br>
       <small>Garantía de satisfacción • Pago seguro • Descarga inmediata</small>
     </footer>
-
   </div>
   <script>
     // Smooth scroll
@@ -248,14 +258,6 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
-    });
-
-    // Form tracking
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nombre = this.querySelector('input[type="text"]').value;
-      const email = this.querySelector('input[type="email"]').value;
-      console.log('Datos capturados:', { nombre, email });
     });
   </script>
 </body>
