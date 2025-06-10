@@ -3,190 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manual del SER Humano</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #111;
-      color: #eee;
-    }
-    .guarantee {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 30px 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .formulario {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      text-align: center;
-      margin: 30px 0;
-      color: #333;
-    }
-    .urgencia {
-      background: #ff4757;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-size: 0.9rem;
-      margin: 15px 0;
-      display: inline-block;
-      animation: blink 1.5s infinite;
-    }
-    @keyframes blink {
-      0%,100% { opacity: 1; }
-      50%    { opacity: 0.7; }
-    }
-    .btn-hotmart {
-      background: linear-gradient(135deg,#ff6b35 0%,#f7931e 100%);
-      color: #fff;
-      padding: 18px 40px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(255,107,53,0.3);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      position: relative;
-      z-index: 10;
-      pointer-events: auto;
-    }
-    .btn-hotmart:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(255,107,53,0.4);
-      background: linear-gradient(135deg,#e55a2b 0%,#e8851a 100%);
-    }
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%,100% { transform: scale(1); }
-      50%     { transform: scale(1.05); }
-    }
-    .testimonial {
-      background: #f8f9fa;
-      padding: 25px;
-      border-radius: 10px;
-      margin: 30px 0;
-      font-style: italic;
-      border-left: 4px solid #8A2BE2;
-      color: #333;
-    }
-    .testimonial-author {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #8A2BE2;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg,#8A2BE2 0%,#4B0082 100%);
-      color: #fff;
-      padding: 15px 35px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(138,43,226,0.3);
-      position: relative;
-      z-index: 10;
-      pointer-events: auto;
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(138,43,226,0.4);
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #2c3e50;
-      color: white;
-      margin-top: 50px;
-    }
-  </style>
+  <title>Comprar Manual del SER Humano</title>
+
+  <!-- 1) Importa el script y el CSS de Hotmart -->
+  <script src="https://static.hotmart.com/checkout/widget.min.js" async></script>
+  <link
+    rel="stylesheet"
+    href="https://static.hotmart.com/css/hotmart-fb.min.css"
+  />
 </head>
 <body>
 
-  <!-- GARANTÍA -->
-  <section class="guarantee">
-    🛡️ <strong>Garantía de 7 días</strong><br>
-    Si no te convence, te devuelvo el 100% de tu dinero
-  </section>
+  <section style="text-align:center; padding:2rem;">
+    <h1>Manual del SER Humano</h1>
+    <p>🛡️ Garantía 7 días: reembolso 100% si no te convence.</p>
 
-  <!-- SECCIÓN COMPRA -->
-  <section class="formulario" id="comprar">
-    <div style="margin-bottom: 20px;">
-      <img src="Foto.jpg" alt="Manual del SER Humano" style="width:120px; border-radius:6px; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
-    </div>
-    <h3 style="color:#8A2BE2;">Adquiere el manual</h3>
-    <div class="urgencia">⏰ OFERTA LIMITADA</div>
-
-    <div style="margin: 30px 0;">
-      <a 
-        href="https://go.hotmart.com/N100172556W"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-hotmart pulse"
-      >
-        🔓 ACTIVAR MI DESPERTAR AHORA
-      </a>
-    </div>
-
-    <p style="font-size:0.8rem; color:#666;">
-      ⚡ Acceso inmediato • 🔒 Pago seguro • 🎯 Resultados garantizados
-    </p>
-    <div style="font-size:0.9rem; color:#555; margin-top:15px;">
-      ✅ Descarga inmediata<br>
-      ✅ Acceso de por vida<br>
-      ✅ Soporte 24/7<br>
-      ✅ Actualizaciones gratuitas
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="testimonial">
-    "Mi autoconcepto cambió completamente. Dejé de identificarme con mis pensamientos limitantes y encontré mi verdadera esencia."
-    <div class="testimonial-author">– Carlos R., Psicólogo</div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section style="text-align:center; margin:40px 0;">
+    <!-- 2) Tu enlace debe llevar ESTA clase y estos atributos -->
     <a
-      href="https://go.hotmart.com/N100172556W"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn-primary pulse"
+      href="https://pay.hotmart.com/N100172556W?checkoutMode=2"
+      class="hotmart__button-checkout"
+      data-code="N100172556W"
+      data-checkout-mode="2"
+      style="display:inline-block; margin-top:1rem;"
     >
-      💫 INICIAR MI RENACIMIENTO
+      <img
+        src="https://static.hotmart.com/img/btn-buy-green.png"
+        alt="Comprar Ahora"
+      />
     </a>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Manual del SER Humano · @sufrimosporquequeremos<br>
-    <small>Garantía • Pago seguro • Descarga inmediata</small>
-  </footer>
-
-  <script>
-    // smooth-scroll para anclas internas (no afecta enlaces externos)
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
-        e.preventDefault();
-        const t = document.querySelector(a.getAttribute('href'));
-        if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
-  </script>
 </body>
 </html>
